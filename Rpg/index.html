@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<title>TamaRPG</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="bungkus">
+	<div id="score">
+		<div id="makan">
+			<div class="label">Makan</div>
+			<div class="value"></div>
+		</div>
+	</div>
+	<div id="stage">
+		<div id="character"></div>
+		<div id="dapur">DAPUR</div>
+	</div>
+	<div id="ruang_dapur">
+		<div id="home">HOME</div>
+	</div>
+</div>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script src="walk.js"></script>
+<script>
+var makan = 50;
+
+$("#dapur").click(function(){
+	var top = $("#character").css("top");
+	var left = $("#character").css("left");
+	alert(top);
+	alert(left);
+	top = parseInt(top);
+	left = parseInt(left);
+	if((top >= 192 && top <= 224) && (left >= 288 && left <= 320)){
+		makan += 5;
+		alert("nom nom");
+		$("#score .value").html(makan);
+		$("#character").remove();
+		$("#stage").hide();
+		$("#ruang_dapur").show();
+		$("#ruang_dapur").append("<div id='character'></div>");
+	}else{
+		alert("Belum sampe dapur.");
+	}
+});
+
+</script>
+
+</body>
+</html>

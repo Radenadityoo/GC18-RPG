@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test layout</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="bungkus">
+	<div id="score">
+		<div id="rep">
+			<div class="label white">Rep</div>
+			<div class="value"></div>
+		</div>
+		<div id="hp">
+			<div class="label white">Health</div>
+			<div class="value"></div>
+		</div>
+		<div id="int">
+			<div class="label white">Intelligence</div>
+			<div class="value"></div>
+		</div>
+		<div id="food">
+			<div class="label white">Food</div>
+			<div class="value"></div>
+		</div>
+		<div id="energy">
+			<div class="label white">Energy</div>
+			<div class="value"></div>
+		</div>
+	</div>
+	<div id="room1">
+		<div id="wall1" class="tembok"></div>
+		<div id="upstairs" class="pr tangga1"></div>
+		<div id="meja">meja</div>
+		<div id="character"></div>
+	</div>
+	<div id="room2">
+		<div id="wall2" class="tembok"></div>
+		<div id="lobby" class="pr tangga1"></div>
+		<div id="hall1" class="pr">Hallway 1</div>
+	</div>
+	<div id="room3">
+    <div id="wall3" class="tembok"></div>
+		<div id="upstairsBack" class="pr">back</div>
+		<div id="class1" class="kelas">Class Room</div>
+    <div id="class2" class="kelas">Class Room</div>
+    <div id="class3" class="kelas">Class Room</div>
+		<div id="hall2" class="pr">Hallway 2</div>
+	</div>
+	<div id="room4">	
+		<div id="hallBack" class="pr">back</div>
+	</div>
+	<div id="room5">
+    <div id="wall4" class="tembok"></div>
+		<div id="hallBack2" class="pr">back</div>
+    <div id="class4" class="kelas">Class Room</div>
+    <div id="class5" class="kelas">Class Room</div>
+		<div id="canteen" class="pr tangga2">Canteen</div>
+	</div>
+	<div id="room6">
+    <div id="wall5" class="tembok"></div>
+		<div id="hallBack3" class="pr tangga2">back</div>
+	</div>
+</div>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script src="walk.js"></script>
+<script>
+	/*!----PINDAH RUANGAN-----*/
+
+  $("#room2").hide();
+  $("#room3").hide();
+  $("#room4").hide();
+  $("#room5").hide();
+  $("#room6").hide();
+
+</script>
+
+</body>
+</html>
