@@ -9,7 +9,7 @@ var currentRoom = 1;
 $(document).ready(function() {
 
 //add character state class
-$('#character').addClass('front-stand');
+$('#character').addClass('back-stand');
 
 });
 
@@ -101,6 +101,7 @@ function processWalk(dir) {
     $("#room1").hide();
     $("#room2").show();
     $("#room2").append("<div id='character' style='top:184px; left:98px;'></div>");
+    $('#character').addClass('back-stand');
   }
 
   // == balik ke lobby ==
@@ -125,6 +126,7 @@ function processWalk(dir) {
     $("#room2").hide();
     $("#room3").show();
     $("#room3").append("<div id='character'style='top:64px;left:64px;'></div>");
+    $('#character').addClass('right-stand');
   } 
 
   // == back ke hallway 1 == 
@@ -137,6 +139,7 @@ function processWalk(dir) {
     $("#room3").hide();
     $("#room2").show();
     $("#room2").append("<div id='character'style='top:64px;left:540px;'></div>");
+    $('#character').addClass('left-stand');
   }
 
   // == classRoom1 (room 3) ==
@@ -149,6 +152,7 @@ function processWalk(dir) {
     $("#room3").hide();
     $("#room4").show();
     $("#room4").append("<div id='character'style='top:64px;left:64px;'></div>");
+    $('#character').addClass('right-stand');
   } 
 
   // == keluar classRoom1 (room 3) == 
@@ -161,6 +165,7 @@ function processWalk(dir) {
     $("#room4").hide();
     $("#room3").show();
     $("#room3").append("<div id='character'style='top:64px;left:544px;'></div>");
+    $('#character').addClass('left-stand');
   }
 
   // == hallway 2 == 
@@ -184,6 +189,7 @@ function processWalk(dir) {
     $("#room5").hide();
     $("#room3").show();
     $("#room3").append("<div id='character' style='top:294px; left:500px;'></div>");
+    $('#character').addClass('back-stand');
   }
 
   // == masuk ke canteen == 
@@ -195,6 +201,7 @@ function processWalk(dir) {
     $("#room5").hide();
     $("#room6").show();
     $("#room6").append("<div id='character' style='top:315px; left:490px;'></div>");
+    $('#character').addClass('left-stand');
   }
 
   // == balik ke hallway 3 (yg ada canteen nya) == 
@@ -206,6 +213,7 @@ function processWalk(dir) {
     $("#room6").hide();
     $("#room5").show();
     $("#room5").append("<div id='character' style='top:315px; left: 74px;'></div>");
+    $('#character').addClass('right-stand');
   }
 
   //move the char
