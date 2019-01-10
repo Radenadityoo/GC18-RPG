@@ -1,0 +1,15 @@
+tambah uang jajan perhari 50rb per hari, auto refill.
+
+bikin kamar / aps = 
+-kasur
+-meja makan
+-kamar mandi
+-fridge
+-lemari (pilih baju) {popup option}
+
+keluar apart bisa milih mau ke mana mana (nanti nyusul kemana nyaa)
+
+bikin transisi (fade in) HITAM 
+
+loading screen (jalan)
+
