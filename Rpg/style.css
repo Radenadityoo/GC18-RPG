@@ -8,8 +8,8 @@
 
 #score {
 	position: absolute;
-	top: 6px;
-	left: 630px;
+	top: 428px;
+	left: 28vw;
 }
 
 #character {
@@ -42,6 +42,10 @@
 
 
 /*!---test.html---*/
+
+.room {
+	left: 28vw;
+}
 
 #room1 {
 	width: 600px;
@@ -101,7 +105,7 @@
 
 .tangga1 {
 	background:#eee;
-	background-image: repeating-linear-gradient(#eee, #eee 8px, #d3d3d3 8px, #d3d3d3 15px);
+	background-image: repeating-linear-gradient(#eee, #eee 15px, #d3d3d3 15px, #d3d3d3 25px);
 }
 
 .tangga2 {
@@ -111,6 +115,7 @@
 	background:#eee;
 	background-image: repeating-linear-gradient(to left, #eee, #eee 20px, #d3d3d3 20px, #d3d3d3 30px);
 }
+
 
 #upstairs {
 	left: 430px;
@@ -233,18 +238,18 @@
 #wall3 {
 	top: 160px;
 	width: 430px;
-   	height: 242px;
-    	left: -1px;
+    height: 242px;
+    left: -1px;
 }
 
 #wall4{
 	width: 430px;
-    	height: 210px;
-    	left: -1px;
+    height: 210px;
+    left: -1px;
 }
 
 #wall5 {
 	left: 240px;
-   	width: 360px;
-    	height: 210px;
+    width: 360px;
+    height: 210px;
 }
