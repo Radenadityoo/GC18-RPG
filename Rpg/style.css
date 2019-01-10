@@ -106,18 +106,16 @@
 
 .tangga2 {
 	top: 210px;
-	width: 400px;
+	width: 360px;
 	height: 190px;
 	background:#eee;
 	background-image: repeating-linear-gradient(to left, #eee, #eee 20px, #d3d3d3 20px, #d3d3d3 30px);
 }
 
-
 #upstairs {
-	top: -5px;
 	left: 430px;
-	width: 110px;
-	height: 83px;
+	width: 115px;
+	height: 90px;
 }
 
 #lobby {
@@ -173,7 +171,7 @@
 }
 
 #hallBack3 {
-	left: 544px;
+	left: 240px;
 }
 
 /*---KELAS---*/
@@ -211,7 +209,6 @@
 /*---Tembok---*/
 
 .tembok {
-	border: 5px solid;
 	background-color: black;
 	margin: 0;
 	padding: 0;
@@ -221,31 +218,33 @@
 }
 
 #wall1 {
-	width: 595px;
-	height: 68px;
-	border-bottom: 5px solid #2c2d2d;
+	width: 600px;
+	height: 88px;
+	background-color: #d3d3d3;
 }
 
 #wall2 {
 	top: 166px;
-	width: 595px;
-	height: 224px;
-	border-top: 5px solid #2c2d2d;
+	width: 601px;
+	height: 236px;
+	left: -1px;
 }
 
 #wall3 {
 	top: 160px;
 	width: 430px;
-    height: 230px;
+   	height: 242px;
+    	left: -1px;
 }
 
 #wall4{
 	width: 430px;
-    height: 200px;
+    	height: 210px;
+    	left: -1px;
 }
 
 #wall5 {
 	left: 240px;
-    width: 350px;
-    height: 200px;
+   	width: 360px;
+    	height: 210px;
 }
