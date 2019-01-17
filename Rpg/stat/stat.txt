@@ -1,0 +1,5 @@
+energi : ijo
+reputasi : kuning
+makan : coklat ayam goreng
+darah : merah
+int : pink
