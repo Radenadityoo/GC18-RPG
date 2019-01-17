@@ -6,11 +6,6 @@
 	color: white;
 }
 
-#score {
-	position: absolute;
-	top: 428px;
-	left: 28vw;
-}
 
 #character {
 	  position: absolute;
@@ -18,7 +13,7 @@
 	  left: 256px;
 	  width: 32px;
 	  height: 32px;
-	  background: url('character.png') no-repeat;
+	  background: url('char_grayHoodie.png') no-repeat;
 }
 
 #character.front-right { background-position: 0px 0px; }
@@ -38,6 +33,27 @@
 #character.back-left { background-position: -64px -96px; }
 
 
+
+/*!---ScoreBoard(?)---*/
+
+.stats {
+	width: 100px;
+	display: inline-block;
+	font-size: 15px;
+	color: #FFFFFF;
+	margin-top: 8px;
+}
+
+.label {
+}
+
+#score {
+	display: inline;
+	position: absolute;
+	top: 428px;
+	left: 28vw;
+	width: 600px;
+}
 
 
 
@@ -124,14 +140,14 @@
 }
 
 #lobby {
-	top: 166px;
+	top: 212px;
 	left: 64px;
 	width: 110px;
-	height: 224px;
+	height: 191px;
 }
 
 #hall1 {
-	top: 64px;
+	top: 110px;
 	left: 544px;
 	width: 50px;
 	height: 50px;
@@ -140,7 +156,7 @@
 }
 
 #upstairsBack {
-	top: 64px;
+	top: 110px;
 	width: 50px;
 	height: 50px;
 	border: 3px dotted green;
@@ -229,16 +245,16 @@
 }
 
 #wall2 {
-	top: 166px;
+	top: 212px;
 	width: 601px;
-	height: 236px;
+	height: 190px;
 	left: -1px;
 }
 
 #wall3 {
-	top: 160px;
-	width: 430px;
-    height: 242px;
+	top: 212px;
+    width: 430px;
+    height: 190px;
     left: -1px;
 }
 
