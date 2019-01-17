@@ -7,27 +7,34 @@
 <body>
 
 <div id="bungkus">
+  <div id="welcome" class="room">
+      <div>whats up my nigga</div>
+      <input type="button" id="awalan" value="Start"/>
+  </div>
+  <div id="waktu">
+      <div id="jam"></div>
+  </div>
 	<div id="score">
-		<div id="rep" class="stats">
-      <span id="rep-lvl" class="value"></span>
-      <span class="label white">Rep</span>
-		</div>
-		<div id="hp" class="stats">
-      <span id="hp-lvl" class="value"></span>
+    <div id="hp" class="stats">
+      <span id="hp-lvl" class="value white"></span>
       <span class="label white">Health</span>
-		</div>
+    </div>
 		<div id="int" class="stats">
-      <span id="int-lvl" class="value"></span>
+      <span id="int-lvl" class="value white"></span>
       <span class="label white">Int</span>
 		</div>
 		<div id="food" class="stats">
-      <span id="food-lvl" class="value"></span>
+      <span id="food-lvl" class="value white"></span>
       <span class="label white">Food</span>
 		</div>
 		<div id="energy" class="stats">
-      <span id="energy-lvl" class="value"></span>
+      <span id="energy-lvl" class="value white"></span>
       <span class="label white">Energy</span>
 		</div>
+    <div id="rep" class="stats">
+      <span id="rep-lvl" class="value white"></span>
+      <span class="label white">Rep</span>
+    </div>
 	</div>
 	<div id="room1" class="room">
 		<div id="wall1" class="tembok"></div>
@@ -64,6 +71,7 @@
 	<div id="room6" class="room">
     <div id="wall5" class="tembok"></div>
 		<div id="hallBack3" class="pr tangga2">back</div>
+    <div></div>
 	</div>
 </div>
 
@@ -71,7 +79,7 @@
 <script src="walk.js"></script>
 <script>
 	/*!----Hide Ruangan-----*/
-
+  $("#room1").hide();
   $("#room2").hide();
   $("#room3").hide();
   $("#room4").hide();
@@ -80,6 +88,12 @@
   $("#matKul1").hide();
   $("#matKul2").hide();
   $("#matKul3").hide();
+
+  $("#awalan").click(function(){
+    $("#awalan").hide();
+    $("#room1").show();
+    $('#character').addClass('back-stand');
+});
 
 </script>
 
