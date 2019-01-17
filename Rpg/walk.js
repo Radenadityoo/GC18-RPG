@@ -186,8 +186,7 @@ function processWalk(dir) {
     $("#character").remove();
     $("#room3").hide();
     $("#room5").show();
-    $("#room5").append("<div id='wall1' class='tembok'> </div> <div id='character'style='top:64px;left:490px;'></div>");
-    $('#wall1').attr("style","width :430px");
+    $("#room5").append("<div id='wall1' class='tembok' style='width:430px;'> </div> <div id='character'style='top:64px;left:490px;'></div>");
   }
 
   // == balik ke hallway 2 == 
@@ -287,7 +286,10 @@ function processWalk(dir) {
 
   // == timee ==
   function jamWaktu(){
-  jamStr = jam + ':' + menit;
+  jamStr = jam + ':' + '0' + menit;
+  if(menit >= 10){
+    jamStr = jam + ':' + menit;
+  }
   document.getElementById("jam").innerHTML = jamStr;
   menit += 1;
   if (menit == 60){
