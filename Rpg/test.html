@@ -17,23 +17,23 @@
 	<div id="score">
     <div id="hp" class="stats">
       <span id="hp-lvl" class="value white"></span>
-      <span class="label white">Health</span>
+      <span><img src="stat/hp.png" id="hp-logo" class="label white"></span>
     </div>
 		<div id="int" class="stats">
       <span id="int-lvl" class="value white"></span>
-      <span class="label white">Int</span>
+      <span><img src="stat/int.png" id="int-logo" class="label white"></span>
 		</div>
 		<div id="food" class="stats">
       <span id="food-lvl" class="value white"></span>
-      <span class="label white">Food</span>
+      <span><img src="stat/food.png" id="food-logo" class="label white"></span>
 		</div>
 		<div id="energy" class="stats">
       <span id="energy-lvl" class="value white"></span>
-      <span class="label white">Energy</span>
+      <span><img src="stat/eng.png" id="energy-logo" class="label white"></span>
 		</div>
     <div id="rep" class="stats">
       <span id="rep-lvl" class="value white"></span>
-      <span class="label white">Rep</span>
+      <span><img src="stat/rep.png" id="rep-logo" class="label white"></span>
     </div>
 	</div>
 	<div id="room1" class="room">
@@ -79,6 +79,12 @@
 <script src="walk.js"></script>
 <script>
 	/*!----Hide Ruangan-----*/
+  $('#hp').hide();
+  $('#int').hide();
+  $('#food').hide();
+  $('#energy').hide();
+  $('#rep').hide();
+  $('#jam').hide();
   $("#room1").hide();
   $("#room2").hide();
   $("#room3").hide();
@@ -91,6 +97,12 @@
 
   $("#awalan").click(function(){
     $("#awalan").hide();
+    $('#hp').show();
+    $('#int').show();
+    $('#food').show();
+    $('#energy').show();
+    $('#rep').show();
+    $('#jam').show();
     $("#room1").show();
     $('#character').addClass('back-stand');
 });
