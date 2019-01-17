@@ -4,7 +4,14 @@ var TimerWalk;          //timer handle
 var charStep = 2;       //1=1st foot, 2=stand, 3=2nd foot, 4=stand
 var charSpeed = 400; //how fast the character will move
 var currentRoom = 1;
-
+var hp = 100;
+var int = 15;
+var food = 50;
+var energy = 80;
+var rep =  0;
+var jam = 5;
+var menit = 0;
+var waktu;
 //Once the DOM is ready, set the character to facing forward (default position)
 $(document).ready(function() {
 
@@ -125,7 +132,7 @@ function processWalk(dir) {
     $("#character").remove();
     $("#room2").hide();
     $("#room3").show();
-    $("#room3").append("<div id='wall1' class='tembok'> <div id='character'style='top:120px;left:96px;'></div>");
+    $("#room3").append("<div id='wall1' class='tembok'> </div><div id='character'style='top:120px;left:96px;'></div>");
     $('#character').addClass('right-stand');
   } 
 
@@ -138,7 +145,7 @@ function processWalk(dir) {
     $("#character").remove();
     $("#room3").hide();
     $("#room2").show();
-    $("#room2").append("<div id='wall1' class='tembok'> <div id='character'style='top:120px;left:520px;'></div>");
+    $("#room2").append("<div id='wall1' class='tembok'> </div> <div id='character'style='top:120px;left:520px;'></div>");
     $('#character').addClass('left-stand');
   }
 
@@ -151,7 +158,7 @@ function processWalk(dir) {
     $("#character").remove();
     $("#room3").hide();
     $("#room4").show();
-    $("#room4").append("<div id='wall1' class='tembok'> <div id='character'style='top:64px;left:64px;'></div>");
+    $("#room4").append("<div id='wall1' class='tembok'> </div> <div id='character'style='top:64px;left:64px;'></div>");
     $('#character').addClass('right-stand');
   } 
 
@@ -166,7 +173,7 @@ function processWalk(dir) {
     $("#character").remove();
     $("#room4").hide();
     $("#room3").show();
-    $("#room3").append("<div id='wall1' class='tembok'> <div id='character'style='top:64px;left:544px;'></div>");
+    $("#room3").append("<div id='wall1' class='tembok'> </div> <div id='character'style='top:64px;left:544px;'></div>");
     $('#character').addClass('left-stand');
   }
 
@@ -179,8 +186,8 @@ function processWalk(dir) {
     $("#character").remove();
     $("#room3").hide();
     $("#room5").show();
-    $("#room5").append("<div id='character'style='top:64px;left:490px;'></div>");
-    $('#wall1').setAttribute("style","width :430px");
+    $("#room5").append("<div id='wall1' class='tembok'> </div> <div id='character'style='top:64px;left:490px;'></div>");
+    $('#wall1').attr("style","width :430px");
   }
 
   // == balik ke hallway 2 == 
@@ -191,7 +198,7 @@ function processWalk(dir) {
     $("#character").remove();
     $("#room5").hide();
     $("#room3").show();
-    $("#room3").append("<div id='wall1' class='tembok'> <div id='character' style='top:294px; left:500px;'></div>");
+    $("#room3").append("<div id='wall1' class='tembok'> </div> <div id='character' style='top:294px; left:500px;'></div>");
     $('#character').addClass('back-stand');
   }
 
@@ -203,7 +210,7 @@ function processWalk(dir) {
     $("#character").remove();
     $("#room5").hide();
     $("#room6").show();
-    $("#room6").append("<div id='wall1' class='tembok'> <div id='character' style='top:315px; left:490px;'></div>");
+    $("#room6").append("<div id='wall1' class='tembok'> </div> <div id='character' style='top:315px; left:490px;'></div>");
     $('#character').addClass('left-stand');
   }
 
@@ -215,7 +222,7 @@ function processWalk(dir) {
     $("#character").remove();
     $("#room6").hide();
     $("#room5").show();
-    $("#room5").append("<div id='wall1' class='tembok'> <div id='character' style='top:315px; left: 74px;'></div>");
+    $("#room5").append("<div id='character' style='top:315px; left: 74px;'></div>");
     $('#character').addClass('right-stand');
   }
 
@@ -246,6 +253,68 @@ function processWalk(dir) {
       break;
 
     }
-
-
 }
+
+  // == fungsi untuk saat start di klik ==  
+  function start(){
+    jamWaktu();
+    status();
+    statusHp();
+    cetakLevel();
+  }
+
+  // == cetak level ==
+  function cetakLevel(){
+    if (hp <= 0) hp = 0;
+    if (int <= 0) int = 0;
+    if (food <= 0) food = 0;
+    if (energy <= 0) energy = 0;
+    if (rep <=0 ) rep = 0;
+    if (hp >= 100) hp = 100;
+    if (int >= 100) int = 100;
+    if (food >= 100) food = 100;
+    if (energy >= 100) energy = 100;
+    if (rep >=100 ) rep = 100;
+
+    document.getElementById("hp-lvl").innerHTML = hp;
+    document.getElementById("int-lvl").innerHTML = int;
+    document.getElementById("food-lvl").innerHTML = food;
+    document.getElementById("energy-lvl").innerHTML = energy;
+    document.getElementById("rep-lvl").innerHTML = rep;
+
+    tLevel = setTimeout(function(){cetakLevel();}, 1000);
+  }
+
+  // == timee ==
+  function jamWaktu(){
+  jamStr = jam + ':' + menit;
+  document.getElementById("jam").innerHTML = jamStr;
+  menit += 1;
+  if (menit == 60){
+    menit = 0;
+    jam += 1;
+  }
+  if (jam == 24) jam = 0;
+  waktu = setTimeout(function(){jamWaktu()}, 1000);
+  }
+
+  // == pengurangan stats ==
+  function status(){
+    food -= 1;
+    energy -=1;
+    tStatus = setTimeout(function(){status();}, 10000);
+  }
+
+  function statusHp(){
+  if(food < 20 || int < 15)
+    hp -= 1;
+    tStatusHp = setTimeout(function(){statusHp();}, 20000);
+  }
+
+  // == fungsi untuk klik pada awal page ==
+
+  function klik(){
+    $('#awalan').click(start);
+  }
+
+  window.addEventListener("load", klik, false);
