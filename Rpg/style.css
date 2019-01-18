@@ -80,7 +80,7 @@
 /*!---ScoreBoard(?)---*/
 
 .stats {
-	width: 100px;
+	width: 90px;
 	display: inline-block;
 	font-size: 15px;
 	color: #FFFFFF;
@@ -92,16 +92,6 @@
 	width: 38px;
 	height: 38px;
 	margin-left: 3px;
-}
-
-.label::after{
-	content: '';
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	width: 38px;
-	height: 38px;
-	border-radius: 50%;
 }
 
 #score {
@@ -121,24 +111,46 @@
 	text-align: center;
 }
 
-#hp-logo::after{
+/*!--- warna untuk stats --- */
+
+.logo-stat::after{
+	content: '';
+	position: absolute;
+	top: 7px;
+	width: 40px;
+	height: 40px;
+	opacity: 0.5;
+	border-radius: 50%;
+	z-index: 3;
+}
+
+#hp-stat::after{
+	left: 33px;
 	background-color: red;
 }
 
-#int-logo::after{
+#int-stat::after{
+	left: 127px;
+	background-color: deeppink;
 }
 
-#food-logo::after{
+#food-stat::after{
+	left: 221px;
+	background-color: #d16406;
 }
 
-#energy-logo::after{
+#energy-stat::after{
+	left: 315px;
+	background-color: #36e817;
 }
 
-#rep-logo{
+#rep-stat::after{
+	left: 409px;
+	background-color: #fbff1c;
 }
 
 
-/*!---test.html---*/
+/*!---css untuk ruangan---*/
 
 .room {
 	left: 28vw;
@@ -188,9 +200,9 @@
 }
 
 .tangga2 {
-	top: 210px;
-	width: 360px;
-	height: 190px;
+	top: 270px;
+    width: 239px;
+    height: 130px;
 	background:#eee;
 	background-image: repeating-linear-gradient(to left, #eee, #eee 20px, #d3d3d3 20px, #d3d3d3 30px);
 }
