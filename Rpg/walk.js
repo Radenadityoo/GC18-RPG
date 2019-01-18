@@ -186,7 +186,7 @@ function processWalk(dir) {
     $("#character").remove();
     $("#room3").hide();
     $("#room5").show();
-    $("#room5").append("<div id='wall1' class='tembok' style='width:430px;'> </div> <div id='character'style='top:64px;left:490px;'></div>");
+    $("#room5").append("<div id='wall1' class='tembok' style='width:430px; left:-1px;'> </div> <div id='character'style='top:64px;left:490px;'></div>");
   }
 
   // == balik ke hallway 2 == 
@@ -275,11 +275,12 @@ function processWalk(dir) {
     if (energy >= 100) energy = 100;
     if (rep >=100 ) rep = 100;
 
-    document.getElementById("hp-lvl").innerHTML = hp;
-    document.getElementById("int-lvl").innerHTML = int;
-    document.getElementById("food-lvl").innerHTML = food;
-    document.getElementById("energy-lvl").innerHTML = energy;
-    document.getElementById("rep-lvl").innerHTML = rep;
+    $('#hp-lvl').html(hp);
+    $('#int-lvl').html(int);
+    $('#food-lvl').html(food);
+    $('#energy-lvl').html(energy);
+    $('#rep-lvl').html(rep);
+
 
     tLevel = setTimeout(function(){cetakLevel();}, 1000);
   }
@@ -290,7 +291,7 @@ function processWalk(dir) {
   if(menit >= 10){
     jamStr = jam + ':' + menit;
   }
-  document.getElementById("jam").innerHTML = jamStr;
+  $('#jam').html(jamStr);
   menit += 1;
   if (menit == 60){
     menit = 0;
