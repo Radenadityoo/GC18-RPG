@@ -1,11 +1,11 @@
 tambah uang jajan perhari 50rb per hari, auto refill.
 
 bikin kamar / aps = 
--kasur
--meja makan
--kamar mandi
--fridge
--lemari (pilih baju) {popup option}
+• kasur
+• meja makan
+• kamar mandi
+• fridge
+• lemari (pilih baju) {popup option}
 
 keluar apart bisa milih mau ke mana mana (nanti nyusul kemana nyaa)
 
@@ -13,3 +13,21 @@ bikin transisi (fade in) HITAM
 
 loading screen (jalan)
 
+fungsi kelas [awal]
+• tempat duduk blm bisa milih
+• jadi tiap masuk kelas, kursinya udh ditempatin sama npc
+• tiap kali duduk di kelas, stat intnya naik
+• jam += 1"30'
+
+fungsi kelas [final]
+• setiap pemilihan posisi kursi, akan berpengaruh tingkat kenaikan stat intnya
+  ► kalau duduk di paling depan  : stat intnya naik banyak
+  ► kalau duduk di tengah        : stat intnya naik biasa biasa sj
+  ► kalau duduk di belakang      : stat intnya naik sedikit
+• bisa milih dif belajarnya (berserker, regular)
+  ► berserker : int += 15
+                food -= 20
+                rep -= 5
+  ► regular   : int += 8
+                food -= 12
+• jam += 1"30'
