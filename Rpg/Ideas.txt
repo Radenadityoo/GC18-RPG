@@ -1,4 +1,4 @@
-tambah uang jajan perhari 50rb per hari, auto refill.
+tambah uang jajan perhari 50c per hari, auto refill.
 
 bikin kamar / aps = 
 • kasur
@@ -11,7 +11,7 @@ keluar apart bisa milih mau ke mana mana (nanti nyusul kemana nyaa)
 
 bikin transisi (fade in) HITAM 
 
-loading screen (jalan)
+✓ loading screen (jalan)
 
 fungsi kelas [awal]
 • tempat duduk blm bisa milih
@@ -31,3 +31,14 @@ fungsi kelas [final]
   ► regular   : int += 8
                 food -= 12
 • jam += 1"30'
+
+toilet : energi += 5
+(bisa ke toilet kalau stat energi <= 60)
+
+makanan
+ ► ayam (5c)      : food += 10
+ ► steak (25c)    : food += 50
+ ► burger (10c)   : food += 20
+ ► minuman (10c)  : energi += 25
+ 
+ 
