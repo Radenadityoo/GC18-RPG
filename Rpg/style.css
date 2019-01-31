@@ -41,7 +41,7 @@
 #jam {
 	position: absolute;
     top: 20px;
-    left: 454px;
+    left: 440px;
     font-size: 20px;
     color: #FFFFFF;
     z-index: 2;
@@ -51,8 +51,8 @@
 	content: '';
 	position: absolute;
 	top: -6px;
-	left: -20px;
-    width: 75px;
+	left: -9px;
+    width: 65px;
     border-bottom-right-radius: 18px;
 	height: 36px;
 	background-color: black;
@@ -81,6 +81,7 @@
 
 .stats {
 	width: 90px;
+	height: 30px;
 	display: inline-block;
 	font-size: 15px;
 	color: #FFFFFF;
@@ -267,7 +268,7 @@
 }
 
 #hallBack3 {
-	left: 240px;
+	left: 360px;
 }
 
 /*---KELAS---*/
@@ -334,16 +335,15 @@
 }
 
 #wall4{
+	top: 60px;
 	width: 430px;
     height: 210px;
     left: -1px;
 }
 
 #wall5 {
-	left: 240px;
-    width: 360px;
-    height: 210px;
+	left: 355px;
+    top: 88px;
+    width: 245px;
+    height: 182px;
 }
-
-
-
