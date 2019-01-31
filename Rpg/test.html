@@ -8,7 +8,7 @@
 
 <div id="bungkus">
   <div id="welcome" class="room">
-      <div>whats up my nigga</div>
+      <div></div>
       <input type="button" id="awalan" value="Start"/>
   </div>
   <div id="waktu">
@@ -66,12 +66,12 @@
 		<div id="hallBack2" class="pr">back</div>
     <div id="class4" class="kelas">Class Room</div>
     <div id="class5" class="kelas">Class Room</div>
-		<div id="canteen" class="pr tangga2">Canteen</div>
+		<div id="canteen" class="pr tangga2"></div>
 	</div>
 	<div id="room6" class="room">
     <div id="wall5" class="tembok"></div>
-		<div id="hallBack3" class="pr tangga2">back</div>
-    <div></div>
+		<div id="hallBack3" class="pr tangga2"></div>
+    <div id="canteenTable">Meja</div>
 	</div>
 </div>
 
@@ -79,11 +79,7 @@
 <script src="walk.js"></script>
 <script>
 	/*!----Hide Ruangan-----*/
-  $('#hp').hide();
-  $('#int').hide();
-  $('#food').hide();
-  $('#energy').hide();
-  $('#rep').hide();
+  $('#score').hide();
   $('#jam').hide();
   $("#room1").hide();
   $("#room2").hide();
@@ -97,11 +93,7 @@
 
   $("#awalan").click(function(){
     $("#awalan").hide();
-    $('#hp').show();
-    $('#int').show();
-    $('#food').show();
-    $('#energy').show();
-    $('#rep').show();
+    $('#score').show();
     $('#jam').show();
     $("#room1").show();
     $('#character').addClass('back-stand');
