@@ -60,7 +60,10 @@ $(document).keyup(function(e) {
 
 });
 
-//Character Walk Function
+//Action
+
+
+ //Character Walk Function
 function charWalk(dir) {
 
   //adjust from lang to code
@@ -280,7 +283,6 @@ function processWalk(dir) {
     $('#food-lvl').html(food);
     $('#energy-lvl').html(energy);
     $('#rep-lvl').html(rep);
-
 
     tLevel = setTimeout(function(){cetakLevel();}, 1000);
   }
