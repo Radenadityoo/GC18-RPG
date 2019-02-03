@@ -152,25 +152,24 @@ function processWalk(dir) {
     $('#character').addClass('left-stand');
   }
 
-  // == classRoom1 (room 3) ==
+  // == classRoom2 (room 3) ==
 
-  if((top >= 128 && top <= 160) && (left >= 544 && left <= 576) && currentRoom == 3){
+  if((top >= 88 && top <= 188) && (left >= 570 && left <= 576) && currentRoom == 3){
     top = 0;
     left = 0;
     currentRoom = 4;
     $("#character").remove();
     $("#room3").hide();
     $("#room4").show();
-    $("#room4").append("<div id='wall1' class='tembok'> </div> <div id='character'style='top:160px;left:32px;'></div>");
+    $("#room4").append("<div id='wall1' class='tembok'> </div> <div id='character'style='top:94px;left:32px;'></div>");
+    $('#hallBack').attr('style','top: 88px;');
     $('#character').addClass('right-stand');
     $('#matKul1').show();
   } 
 
-  // == classRoom 2 (room 3) ==
+  // == keluar classRoom2 (room 3) == 
 
-  // == keluar classRoom1 (room 3) == 
-
-  if((top >= 160 && top <= 192) && (left >= 0 && left <= 32) && currentRoom == 4){
+  if((top >= 88 && top <= 140) && (left >= 0 && left <= 32) && currentRoom == 4){
     top = 0;
     left = 0;
     currentRoom = 3;
@@ -179,6 +178,35 @@ function processWalk(dir) {
     $("#room3").show();
     $("#room3").append("<div id='wall1' class='tembok'> </div> <div id='character'style='top:120px;left:544px;'></div>");
     $('#character').addClass('left-stand');
+    $('#matKul1').hide();
+  }
+
+  // == classRoom3 (room 3) ==
+  if((top >= 220 && top <= 295) && (left >= 570 && left <= 576) && currentRoom == 3){
+    top = 0;
+    left = 0;
+    currentRoom = 4;
+    $("#character").remove();
+    $("#room3").hide();
+    $("#room4").show();
+    $("#room4").append("<div id='wall1' class='tembok'> </div> <div id='character'style='top:226px;left:32px;'></div>");
+    $('#hallBack').attr('style','top: 220px;');
+    $('#character').addClass('right-stand');
+    $('#matKul2').show();
+  } 
+
+  // == keluar classRoom3 (room 3) == 
+
+  if((top >= 220 && top <= 252) && (left >= 0 && left <= 32) && currentRoom == 4){
+    top = 0;
+    left = 0;
+    currentRoom = 3;
+    $("#character").remove();
+    $("#room4").hide();
+    $("#room3").show();
+    $("#room3").append("<div id='wall1' class='tembok'> </div> <div id='character'style='top:252px;left:544px;'></div>");
+    $('#character').addClass('left-stand');
+    $('matKul2').hide();
   }
 
   // == hallway 2 == 
