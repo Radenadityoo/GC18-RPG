@@ -154,7 +154,23 @@ function processWalk(dir) {
 
   // == classRoom1 (room 3) ==
 
- if((top >= 160 && top <= 192) && (left >= 0 && left <= 32) && currentRoom == 4){
+  if((top >= 128 && top <= 160) && (left >= 544 && left <= 576) && currentRoom == 3){
+    top = 0;
+    left = 0;
+    currentRoom = 4;
+    $("#character").remove();
+    $("#room3").hide();
+    $("#room4").show();
+    $("#room4").append("<div id='wall1' class='tembok'> </div> <div id='character'style='top:160px;left:32px;'></div>");
+    $('#character').addClass('right-stand');
+    $('#matKul1').show();
+  } 
+
+  // == classRoom 2 (room 3) ==
+
+  // == keluar classRoom1 (room 3) == 
+
+  if((top >= 160 && top <= 192) && (left >= 0 && left <= 32) && currentRoom == 4){
     top = 0;
     left = 0;
     currentRoom = 3;
@@ -162,21 +178,6 @@ function processWalk(dir) {
     $("#room4").hide();
     $("#room3").show();
     $("#room3").append("<div id='wall1' class='tembok'> </div> <div id='character'style='top:120px;left:544px;'></div>");
-    $('#character').addClass('left-stand');
-  }
-
-  // == classRoom 2 (room 3) ==
-
-  // == keluar classRoom1 (room 3) == 
-
-  if((top >= 32 && top <= 64) && (left >= 0 && left <= 64) && currentRoom == 4){
-    top = 0;
-    left = 0;
-    currentRoom = 3;
-    $("#character").remove();
-    $("#room4").hide();
-    $("#room3").show();
-    $("#room3").append("<div id='wall1' class='tembok'> </div> <div id='character'style='top:64px;left:544px;'></div>");
     $('#character').addClass('left-stand');
   }
 
